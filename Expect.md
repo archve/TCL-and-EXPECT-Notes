@@ -7,9 +7,9 @@
 3.global <variable name> -> to use a variable defined globally, variable name binds to the global variable of the same name
 
 4.Function definition : Functions are defined as follows here args is a list of paramters passed to it.
-  proc <function_name> { <args> }{
+    proc <function_name> { <args> }{
   
-  }
+    }
 5.Funtion call consists of name of the function followed by the arguments
   <Function_name> <arg1> <arg2> <arg3> ...
   
