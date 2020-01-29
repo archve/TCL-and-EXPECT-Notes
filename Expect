@@ -3,6 +3,7 @@
 1.source "File path"  -> similar to include other scripts in the current script. Similar to c include
 
 2.set variable_name variable_value -> to create a variable and assign it a Value
+  set variable_name -> returns the value of the variable.
 
 3.global variable_name -> to use a variable defined globally, variable name binds to the global variable of the same name
 
@@ -14,3 +15,17 @@
   Function_name arg1 arg2 arg3 ...
   
 6.Variables are used with a $ preceding their names. -> $variable_name
+
+7. if block
+    
+    if { condition }{
+    
+    }
+    
+8. strace - a unix command line utility for system call tracing
+
+9. [ script ] - embeds a script to be evalutated, whose result is substituted.
+
+10. String operations
+
+11.Spawn 
