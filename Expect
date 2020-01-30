@@ -22,9 +22,12 @@
     }
     or it can also be like this 
     
-    proc proc_name {arg1 arg2}{
+    proc proc_name {arg1 args}{
     
     }
+    
+    any extra argument passed to the procedure are saved in the args as list
+    
 5.procedure call consists of name of the function followed by the arguments
   proc_name arg1 arg2 arg3 ...
   
@@ -67,5 +70,16 @@
     >fconfigure $channelid -buffering line  - flushes everythime an ew line is output
     
     what is a standard channel?
- 19.
+    
+19 . puts - writes to a channel channel
+      >puts channelid string -> write to channel given by channel id
+      >puts string -> writes to standard output
+      
+      Note - any scripts in the string are evaluated and then written
+
+20[E]. timestamp - returns a timestamp, with no arguments returns time since epoch
+       >timestamp -format %c - format flag options determines the formatting of the time. 
+       
+  
+
  
