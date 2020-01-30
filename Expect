@@ -4,17 +4,31 @@
 
 2.set variable_name variable_value -> to create a variable and assign it a Value
   set variable_name -> returns the value of the variable.
+  set defines a variable both locally and globally.
+  To define a varaible locally(current namespce) use variable 
+  variable var_name var_val -> creates a variable in current namespace
+  > when trying to access a variable set always take the global value
+  > when creating a new variable set creates in current namespace
+  > accessing using set after a variable is created using variable, here set points to current namespace, even if global value exists
+    varirable var_name var_value
+    set var_name
+  > variables within procedures have local scope
 
 3.global variable_name -> to use a variable defined globally, variable name binds to the global variable of the same name
 
-4.Function definition : Functions are defined as follows here args is a list of paramters passed to it.
-    proc function_name { args }{
+4.Procedure definition : Procedures are defined as follows here args is a list of paramters passed to it.
+    proc proc_name { args }{
   
     }
-5.Funtion call consists of name of the function followed by the arguments
-  Function_name arg1 arg2 arg3 ...
+    or it can also be like this 
+    
+    proc proc_name {arg1 arg2}{
+    
+    }
+5.procedure call consists of name of the function followed by the arguments
+  proc_name arg1 arg2 arg3 ...
   
-6.Variables are used with a $ preceding their names. -> $variable_name
+6.Variables are substituted in a string with a $ preceding their names. -> $variable_name
 
 7. if block
     
@@ -22,10 +36,36 @@
     
     }
     
-8. strace - a unix command line utility for system call tracing
+8[E]. strace level - an expect command to tp trace calls. level indiciates the dept hof the call stack to trace 
 
 9. [ script ] - embeds a script to be evalutated, whose result is substituted.
 
-10. String operations
+10.String operations- Many different ways exist for string comparision
 
-11.Spawn 
+   >string compare $val "something"  -> true if value is zero, -1/1 based on lexicographic comparsion, can use additional flags to give lenth to compare and ignore case
+
+11[E].Spawn program args - creates a new process running program args , returns the unix process id or 0 is program is not started. 
+      Process started by spawn sets the spawn_id , the process referred by spawn_id is called the current_process.
+      The process is stopped using close
+
+12. file - is a built in command to manipulate file names and attributes.
+   > file tail $name -> returns all the character from last file system component of the val
+   > file join $name1 $name2
+   
+13[E] send_log string - similar to send, sends string to a log_file, ignored if no log file is open
+
+14[E] send string - sends a string to the running process
+
+15[E] log_file [args] -a file - logs into file if name is given, stopes loggining if no oarguemnts are provided.By defaut appends to the file.
+
+16.eval - evaluates a Tcl script
+
+17. open filename [access] [permissions]- opens a file, serial port or command pipeline and returns a channel identifier
+    >open filename w+
+    
+18. fconfigure channelid [name] [value]-set and get options on a channel
+    >fconfigure $channelid -buffering line  - flushes everythime an ew line is output
+    
+    what is a standard channel?
+ 19.
+ 
