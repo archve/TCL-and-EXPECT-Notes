@@ -67,7 +67,7 @@
     >open filename w+
     
 18. fconfigure channelid [name] [value]-set and get options on a channel
-    >fconfigure $channelid -buffering line  - flushes everythime an ew line is output
+    >fconfigure $channelid -buffering line  - flushes everytime a new line is output
     
     what is a standard channel?
     
@@ -79,6 +79,19 @@
 
 20[E]. timestamp - returns a timestamp, with no arguments returns time since epoch
        >timestamp -format %c - format flag options determines the formatting of the time. 
+
+21. incr - increments the contents of a variable
+    incr x -> adds 1
+    incr x 10 -> adds 10 to x
+    incr x $y -> adds contents of y to x
+    incr x 0 -> adds nothings, helpful in error checking
+22[E].exp_continue - resets the timeout timer to zero and continues execution of the expect block
+
+23.concat arg1 arg2 -> joins the arguments togather with spaces by removing leading and trailing spaces
+
+24.llength - count the number of elements in a list
+
+25.lindex list?  index?- retrieve an element from the list, index can be 0 or more
        
   
 
