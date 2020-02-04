@@ -92,6 +92,26 @@
 24.llength - count the number of elements in a list
 
 25.lindex list?  index?- retrieve an element from the list, index can be 0 or more
+  
+    lindex $args 0
+    lindex $args end
+    
+26[E]. expect - programmed dialogue for interactive programs
+       Expect has many commands and flag.
+       flags help control the execution flow.
+       -re flag to match a RE
+       common commands - timeout
+27. string range $stringname fist last- get the substring of the string marked by the indexes given
+
+    string range $reg $first end
+    
+28[E].close - Closes the connection with the current process 
+
+29[E].wait - waits until the spawned process terminates
+
+30. close $channelid - closes the connection to the channel
+
+31[E] exit - causes expect to exit
        
   
 
