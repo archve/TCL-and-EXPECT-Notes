@@ -13,6 +13,9 @@
     varirable var_name var_value
     set var_name
   > variables within procedures have local scope
+  
+  set result up
+  if up is not defined earlier value of result will be up
 
 3.global variable_name -> to use a variable defined globally, variable name binds to the global variable of the same name
 
@@ -96,11 +99,14 @@
     lindex $args 0
     lindex $args end
     
-26[E]. expect - programmed dialogue for interactive programs
-       Expect has many commands and flag.
+26[E]. expect - programmed dialogue for interactive programs. waits until matches a pattern or timeout occurs or eof.
+       pattern can be tcl style glob patterns or regexp. Executes the block which matches any of the mentiones criteria.
+       Expect has many commands and flags.
        flags help control the execution flow.
-       -re flag to match a RE
-       common commands - timeout
+       -re flag is used to match regex pattern
+       -exact for exact matching
+       " " - for glob style matching
+       common commands - timeout, eof
 27. string range $stringname fist last- get the substring of the string marked by the indexes given
 
     string range $reg $first end
@@ -112,6 +118,41 @@
 30. close $channelid - closes the connection to the channel
 
 31[E] exit - causes expect to exit
+
+32. Arrays are variables/containers which will contain other variables.
+    testarray is an array
+    set testarray(v1) var1
+    set testarray(v2) var2
+    set newstr "Array elements are $testarray(v1), $testarray(v2)"
+    
+33. append var1 var2 - appends var2 to var1
+
+34. catch {script} ?resultvarname ?optionsvarname - execute scripts and catch exceptional returns
+
+35. switch - evaluate one of the multipule options. Had options to control the type of matching
+    switch -glob -- $varaible{
+      "*pat1*" {Some action}
+       "pat2" -  -> fall through condition
+       "pat3" { some action}
+       default {}
+    }
+36. exec <script>
+
+37[E]. sleep seconds -> causes script to sleep for seconds
+
+38. while { condition }{
+
+    }
+    
+39. If {condition} {
+    }
+    
+40. for {set a 0} {$a < $somevar} {incr a}{
+    }
+    
+41. 
+    
+    
        
   
 
