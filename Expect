@@ -150,8 +150,10 @@
 40. for {set a 0} {$a < $somevar} {incr a}{
     }
     
-41. scan - to parses substrings from a string based on the format specifiers and returns the number of substrings parsed.
+41.scan - to parses substrings from a string based on the format specifiers and returns the number of substrings parsed.
 
+42. string first str1 str2 - search occurance of str1 in str2 and retursn fisrst such occurance in str2.
+    example - string first "\n" str 
     
     
        
