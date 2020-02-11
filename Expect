@@ -154,8 +154,21 @@
 
 42. string first str1 str2 - search occurance of str1 in str2 and retursn fisrst such occurance in str2.
     example - string first "\n" str 
+   
+43.lsort - sort elements of a list
+    lsort -integer list
+      converts the list element to integer and perform integer comparision
+      
+44.array - helps to manipulate array variables
+
+    array names arraylist - returns a list of all elements in the arraylist.
     
-    
+45 linsert - insert elements in a list
+    linsert list index element
+
+46 ldiff - similar to set difference between two lists
+
+47. file exists filename - returns 1 it file exists
        
   
 
