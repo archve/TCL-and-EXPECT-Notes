@@ -169,6 +169,15 @@
 46 ldiff - similar to set difference between two lists
 
 47. file exists filename - returns 1 it file exists
+
+48.lrange list first last - returns a list of elements from the list withing the given indices(first and last)
+
+49.foreach elem list - iterate over elements in one or more lists
+
+50.regexp - matches regular expression against a string
+  regexp -- $var1 $var2
+  
+51.
        
   
 
